@@ -1,0 +1,36 @@
+
+h1{
+font-family: cursive;
+font-size:16pt
+
+}
+
+h2{
+font-family: Courier new;
+font-size:40pt;
+ width: 520px;
+ margin: 0 auto;
+}
+
+h3{
+font-family: Courier new;
+font-size:15pt;
+
+}
+#contenedor {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+article {
+  float:left;
+  width: 400 px;
+  border: 10px;
+} 
+
+input{
+margin: 15px;
+border: black 2px solid;
+font-weight: bold;
+font-family: Courier new;
+}
