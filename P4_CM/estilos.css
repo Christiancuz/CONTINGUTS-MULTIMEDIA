@@ -1,13 +1,12 @@
 
 h1{
 font-family: cursive;
-font-size:16pt
-
+font-size:16pt;
 }
 
 h2{
-font-family: Courier new;
-font-size:40pt;
+font-family:Courier new ;
+font-size:35pt;
  width: 520px;
  margin: 0 auto;
 }
@@ -17,6 +16,13 @@ font-family: Courier new;
 font-size:15pt;
 
 }
+
+h4{
+font-family: Courier new;
+font-size:15pt;
+color:red;
+}
+
 #contenedor{
   width: 1100px;
   margin: 0 auto;}
@@ -28,22 +34,35 @@ article{
 } 
 
 input{
-margin: 15px;
-border: black 1px solid;
+margin:10px;
+border: black 0.5px solid;
 font-weight: bold;
 font-family: Courier new;
 }
 
-
 #boton{
-display: inline-block;
-margin:left;
-
+margin-left:center;
+margin-right:center;
 }
 
-#MENU:hover{
-border: black 1px solid;
-display:;
+
+#panel, #MENU{
+padding: 15px;
+text-align: center;
+background-color:#F5F5F5;
+border:solid 3px #c3c3c3;
+margin: 0 auto;
+padding:3px 10px 3px 10px;
 }
+
+#panel{
+display: none;
+padding: 13px;
+text-align: center;
+background-color:none;
+margin: 0 auto;
+padding:3px 10px 3px 10px;
+}
+
 
 
