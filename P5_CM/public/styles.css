@@ -1,0 +1,57 @@
+body{background:url(http://images.forwallpaper.com/files/images/b/b1bd/b1bd41d9/251709/texture-wallpaper-gray-background-patterns.jpg)
+}
+
+h2{
+font-family:Courier new ;
+font-size:35pt;
+}
+
+h1{
+font-family: cursive;
+font-size:15pt;
+}
+
+#contenedor{
+  width: 980px;
+  margin: 0 auto;}
+
+
+article{
+  float:left;
+  width: 400 px;
+  border: 10px;
+} 
+
+input{
+margin:10px;
+border: black 2px solid;
+font-weight: bold;
+font-family: Courier new;
+border:solid 2px #252525;
+}
+
+#boton{
+margin-left:center;
+margin-right:center;
+margin: 3 auto;
+}
+
+#panel, #MENU{
+padding: 10px;
+text-align: center;
+background-color:#F5F5F5;
+border:solid 3px #c3c3c3;
+margin: 0 auto;
+padding:3px 10px 3px 10px;
+}
+
+#panel{
+display: none;
+padding: 6px;
+text-align: center;
+background-color:none;
+margin: 0 auto;
+padding:3px 10px 3px 10px;
+}
+
+
