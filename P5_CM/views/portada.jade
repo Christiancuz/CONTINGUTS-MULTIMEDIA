@@ -1,8 +1,15 @@
 extends base
 include mixins/picture
 
+//block content
+//    div.row
+//        - for (var i = 0; i < 9; ++i) {
+//            +picture(pics[i].href, pics[i].titulo, pics[i].getPrice())
+//        - }
+
+
 block content
     div.row
-        - for (var i = 0; i < 9; ++i) {
-            +picture(pics[i].href, pics[i].titulo, pics[i].getPrice())
+        - for (var i = 0; i < pics.length; ++i) {
+            +picture(pics[i])
         - }

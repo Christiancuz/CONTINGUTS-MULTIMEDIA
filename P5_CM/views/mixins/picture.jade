@@ -1,8 +1,17 @@
-mixin picture(sourceImage, titulo, price)
-  div.col-md-4.product-box		
-    article.imagen
-      center				
-        img(src=sourceImage, width="300")
-        p #{titulo}
-        p #{price} €
-        input.boton(type="button",value="comprar", onclick="comprar('#{titulo}','#{price}');")
+//mixin picture(sourceImage, titulo, price)
+//  div.col-md-4.product-box		
+//    article.imagen
+//      center				
+//        img(src=sourceImage, width="300")
+//        p #{titulo}
+//        p #{price} €
+//        input.boton(type="button",value="comprar", onclick="comprar('#{titulo}','#{price}');")
+
+mixin picture(pics)
+	div.col-md-4.product-box
+		article.imagen
+			center
+				img(src=pics.image, width="300")
+				p #{pics.name}
+				p #{pics.getPrice()} €
+				input.boton(type="button", value="Comprar", onclick="comprar('#{pics.name}', '#{pics.getPrice()}');")
