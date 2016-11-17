@@ -1,0 +1,32 @@
+h1{
+color:Darkblue;
+}
+
+h2{
+color:Dimgray;
+}
+
+
+body{
+font-family: Kozuka Gothic Pr6N;
+font-size: 12px;
+}
+
+
+img{
+width:200px;
+heght:200px;
+}
+
+
+/*contenedor de un identificador unico(ALMOHADILLA ES PARA MODIFICAR LOS IDs QUE SON UNICOS*/
+#contenedor{
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* CON PUNTO MODIFICO LAS CLASES*/
+.azul{
+	color:blue;
+}
+
