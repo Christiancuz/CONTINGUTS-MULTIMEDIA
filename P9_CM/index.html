@@ -1,0 +1,139 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Calculadora_Felipe_Cuzcano</title>
+    <script type="text/javascript" src="phaser.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(525, 640, Phaser.AUTO, 'phaser-example', { preload: preload, create: create });
+function preload() {
+    game.load.image('button-0', 'images/seven.png');
+    game.load.image('button-1', 'images/four.png');
+    game.load.image('button-2', 'images/one.png');
+    game.load.image('button-3', 'images/equal.png');
+    game.load.image('button-4', 'images/eight.png');
+    game.load.image('button-5', 'images/five.png');
+    game.load.image('button-6', 'images/two.png');
+    game.load.image('button-7', 'images/zero.png');
+    game.load.image('button-8', 'images/nine.png');
+    game.load.image('button-9', 'images/six.png');
+    game.load.image('button-10', 'images/three.png');
+    game.load.image('button-11', 'images/cl.png');
+    game.load.image('button-12', 'images/plus.png');
+    game.load.image('button-13', 'images/minus.png');
+    game.load.image('button-14', 'images/multiply.png');
+    game.load.image('button-15', 'images/division.png');
+}
+
+var background;
+var a="",b="", c=0,resultado=0, llave="", text;
+
+function create() {
+
+    game.stage.backgroundColor = '#9cff7d';
+
+    var style = { font: "90px Arial", fill: "#252525" };
+    text = game.add.text(10, 530, " ", style);
+
+    var n = 0;
+    for (var i = 0; i < 4; i++){
+	    for(var j = 0; j < 4; j++){
+	    var key = "button-"+n;
+	    game.add.button(i * 130, j * 130, key, actionOnClick, {keyname:n}, 0, 0, 0);
+	    n++;
+	    }
+    } 
+}
+
+function actionOnClick () {
+
+    llave=this.keyname;
+
+    if (llave==0){
+        if(c==0) a+=String(7);
+        else b+=String(7);
+    }
+    else if (llave==1){
+        if(c==0) a+=String(4);
+        else b+=String(4);
+    }
+    else if (llave==2){
+        if(c==0) a+=String(1);
+        else b+=String(1);
+    }
+    else if (llave==7){
+        if(c==0) a+=String(0);
+        else b+=String(0);
+    }
+    else if (llave==4){
+        if(c==0) a+=String(8);
+        else b+=String(8);
+    }
+    else if (llave==5){
+        if(c==0) a+=String(5);
+        else b+=String(5);
+    }
+    else if (llave==6){
+        if(c==0) a+=String(2);
+        else b+=String(2);
+    }
+    else if (llave==8){
+        if(c==0) a+=String(9);
+        else b+=String(9);
+    }
+    else if (llave==9){
+        if(c==0) a+=String(6);
+        else b+=String(6);
+    }
+    else if (llave==10){
+        if(c==0) a+=String(3);
+        else b+=String(3);
+    }
+
+    else if (llave==12 || llave==13 || llave==14 || llave==15){
+        c=llave;
+    }
+
+    else if(llave==3){ //button "="
+
+        if (c==12){ // button "+"
+           resultado=Number(a) + Number(b);
+        }
+        else if (c==12){ // button "-"
+           resultado=Number(a) - Number(b);
+        }
+        else if (c==14){ // button "*"
+            resultado=Number(a) * Number(b);
+        }
+        else if (c==15){ // button "/"
+            resultado=Number(a) / Number(b);
+        }
+        else {
+	        resultado=Number(a);
+        }
+
+        text.text = " " + String(resultado);
+        a=resultado;
+        resultado = 0;
+        c=0;
+        b="";
+    }
+
+    else {
+        resultado=0;
+        text.text = " " + String(resultado);
+        c=0;
+        a="";
+        b="";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
