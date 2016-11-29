@@ -37,13 +37,13 @@ function create() {
     game.stage.backgroundColor = '#9cff7d';
 
     var style = { font: "90px Arial", fill: "#252525" };
-    text = game.add.text(10, 530, " ", style);
+    text = game.add.text(0, 0, " ", style);
 
     var n = 0;
     for (var i = 0; i < 4; i++){
 	    for(var j = 0; j < 4; j++){
 	    var key = "button-"+n;
-	    game.add.button(i * 130, j * 130, key, actionOnClick, {keyname:n}, 0, 0, 0);
+	    game.add.button(i * 130, j * 130 + 100, key, actionOnClick, {keyname:n}, 0, 0, 0);
 	    n++;
 	    }
     } 
